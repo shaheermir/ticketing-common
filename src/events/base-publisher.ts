@@ -21,6 +21,7 @@ export abstract class Publisher<T extends Event> {
           return reject(err);
         }
 
+        console.log(`Message published: ${this.subject}`);
         resolve();
       });
     });
